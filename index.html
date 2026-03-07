@@ -3,141 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshad Prakash Donawade | Flight Controls Portfolio</title>
+    
+    <title>Harshad Prakash Donawade | Flight Controls Engineer | Airbus</title>
+    <meta name="description" content="Official portfolio of Harshad Prakash Donawade, Flight Controls Development Engineer at Airbus India. M.Tech Aerospace from IIT Madras.">
+    <meta name="keywords" content="Harshad Prakash Donawade, Harshad Donawade, Aerospace Engineer, Airbus India, Flight Controls, IIT Madras, Trajectory Optimisation">
+    <meta name="author" content="Harshad Prakash Donawade">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Harshad Prakash Donawade",
+      "jobTitle": "Flight Controls Development Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Airbus India"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "IIT Madras" },
+        { "@type": "CollegeOrUniversity", "name": "KLS Gogte Institute of Technology" }
+      ],
+      "url": "https://harshaiitm.github.io/Aero.github.io/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belagavi",
+        "addressRegion": "Karnataka",
+        "addressCountry": "India"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #002244; --accent: #005596; --text: #333; --light: #f8fafc; }
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--light); }
-        
-        /* Navigation */
-        nav { background: white; padding: 1rem 2rem; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
-
-        /* Hero Section */
-        header { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #002244 0%, #005596 100%); color: white; text-align: center; padding: 20px; }
-        header h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; }
-        .hero-sub { font-size: 1.2rem; opacity: 0.9; margin: 10px 0; }
-
-        /* Sections */
-        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
-        section { margin-bottom: 60px; }
-        h2 { font-size: 2rem; color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-bottom: 30px; }
-
-        /* Experience Accordion */
-        .exp-card { background: white; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
-        summary { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 1.1rem; }
-        summary:hover { background: #fdfdfd; }
-        .details-content { padding: 0 25px 25px 25px; border-top: 1px solid #eee; }
-        .meta-info { color: var(--accent); font-size: 0.9rem; margin: 10px 0; display: block; }
-
-        /* Skills Grid */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-        .skill-tag { background: white; padding: 15px; text-align: center; border-radius: 8px; border: 1px solid #e2e8f0; font-weight: 500; transition: 0.3s; }
-        .skill-tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
-
-        /* Education Table */
-        .edu-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; }
-        .edu-table th, .edu-table td { padding: 18px; text-align: left; border-bottom: 1px solid #eee; }
-        .edu-table th { background: #f1f5f9; color: var(--primary); }
-
-        footer { text-align: center; padding: 40px; background: var(--primary); color: white; }
+        :root { --primary: #002244; --accent: #005596; --bg: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
+        nav { background: white; padding: 1rem 2rem; position: sticky; top: 0; display: flex; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
+        header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; text-align: center; padding: 80px 20px; }
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; }
+        details { border: 1px solid #eee; border-radius: 8px; margin-bottom: 10px; }
+        summary { padding: 15px; font-weight: 600; cursor: pointer; color: var(--accent); }
+        .details-body { padding: 15px; border-top: 1px solid #eee; }
+        .tag { background: #e2e8f0; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin: 3px; }
+        .project-img-placeholder { background: #eee; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-bottom: 15px; border: 1px dashed #ccc; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div style="font-weight: 800; color: var(--primary);">HPD.AERO</div>
+        <div style="font-weight: 800; color: var(--primary);">HARSHAD.AERO</div>
         <div class="nav-links">
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
+            <a href="#exp" style="text-decoration:none; margin-left:15px; color:var(--primary);">Experience</a>
+            <a href="#edu" style="text-decoration:none; margin-left:15px; color:var(--primary);">Education</a>
         </div>
     </nav>
 
     <header>
         <h1>Harshad Prakash Donawade</h1>
-        <div class="hero-sub">Flight Controls Development Engineer</div>
-        <p><i class="fas fa-envelope"></i> harshaddonawade@gmail.com | <i class="fas fa-phone"></i> +91 8123304145</p>
-        <p><i class="fas fa-map-marker-alt"></i> Belagavi, Karnataka, India - 591242</p>
+        <p style="font-size:1.2rem; opacity:0.9;">Flight Controls Development Engineer @ Airbus India</p>
+        <div style="margin-top:20px;">
+            <a href="mailto:harshaddonawade@gmail.com" style="color:white; margin:0 10px;"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/harshad-donawade" style="color:white; margin:0 10px;"><i class="fab fa-linkedin"></i></a>
+        </div>
     </header>
 
     <div class="container">
-        
-        <section id="experience">
-            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            
-            <details class="exp-card" open>
-                <summary>Airbus India Pvt Ltd <span style="font-weight: normal; font-size: 0.9rem;">2024 - Present</span></summary>
-                <div class="details-content">
-                    <span class="meta-info">Flight Controls Development Engineer | Bengaluru</span>
+        <section id="exp">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            <details open>
+                <summary>Airbus India | Flight Controls Engineer (2024-Present)</summary>
+                <div class="details-body">
                     <ul>
-                        <li>Performance modeling for next-generation high-lift systems (HLS/ATA-27b).</li>
-                        <li>Upgrading Slat Flap Control Computer (SFCC) software for SA family, A350, and A380.</li>
+                        <li>Performance modeling for High-Lift Systems (ATA-27b).</li>
+                        <li>SFCC software upgrades for A350, A380, and SA family.</li>
                     </ul>
                 </div>
             </details>
-
-            <details class="exp-card">
-                <summary>IIT Dharwad <span style="font-weight: normal; font-size: 0.9rem;">2022</span></summary>
-                <div class="details-content">
-                    <span class="meta-info">Junior Research Fellow | Dharwad</span>
-                    <p>Experimental investigation of propeller downwash on spray characteristics in UASS.</p>
-                    
-                    <ul>
-                        <li>Used Laser Doppler Velocimetry (LDV) to study droplet velocity and patternation.</li>
-                        <li>Published in ILASS-Asia 22nd Annual Conference (Oct 2022).</li>
-                    </ul>
-                </div>
-            </details>
-
-            <details class="exp-card">
-                <summary>Sparsh Machinery <span style="font-weight: normal; font-size: 0.9rem;">2021</span></summary>
-                <div class="details-content">
-                    <span class="meta-info">Drone Development Intern | Jamshedpur</span>
-                    <ul>
-                        <li>Design of Quadcopters/Hexacopters for industrial cleaning and turbine inspection.</li>
-                        <li>Demonstrated prototypes at GE (Greenko) and Gamesa.</li>
-                    </ul>
+            <details>
+                <summary>IIT Dharwad | Junior Research Fellow (2022)</summary>
+                <div class="details-body">
+                    <p>Research on propeller downwash in UASS using Laser Doppler Velocimetry (LDV).</p>
                 </div>
             </details>
         </section>
 
         <section id="projects">
-            <h2><i class="fas fa-rocket"></i> Key Projects</h2>
-            
-            <details class="exp-card">
-                <summary>Launch Vehicle Trajectory Optimisation (M.Tech)</summary>
-                <div class="details-content">
-                    <span class="meta-info">IIT Madras | MATLAB & Python</span>
-                    
-                    <ul>
-                        <li>Implementation of Pseudospectral methods (LG, LGL, LGR, CGL) for fuel minimization.</li>
-                        <li>Validated schemes for Goddard rocket ascent and supersonic aircraft climb.</li>
-                    </ul>
+            <h2><i class="fas fa-rocket"></i> Projects</h2>
+            <details>
+                <summary>Launch Vehicle Trajectory Optimisation</summary>
+                <div class="details-body">
+                    <div class="project-img-placeholder">
+                         <i class="fas fa-chart-line"></i> [Insert Trajectory Plot Image]
+                    </div>
+                    <p>M.Tech project at IIT Madras using Pseudospectral methods (LG, LGL, LGR, CGL).</p>
                 </div>
             </details>
-
-            <details class="exp-card">
-                <summary>Hybrid Autonomous UAV (B.Tech)</summary>
-                <div class="details-content">
-                    <span class="meta-info">KLS GIT | SolidWorks & XFLR5</span>
-                    
-                    <ul>
-                        <li>Fabricated 2.4kg UAV with 0.225kg payload using 3D printing and laser cutting.</li>
-                        <li>Conducted flight stability analysis in VTOL, climb, and cruise regimes.</li>
-                    </ul>
+            <details>
+                <summary>Hybrid Autonomous UAV Design</summary>
+                <div class="details-body">
+                    <div class="project-img-placeholder">
+                         <i class="fas fa-plane"></i> [Insert UAV Design Image]
+                    </div>
+                    <p>B.Tech project at KLS GIT. 2.4kg VTOL UAV design and testing.</p>
                 </div>
             </details>
         </section>
 
-        <section id="education">
+        <section id="edu">
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <table class="edu-table">
-                <tr><th>Degree</th><th>Institution</th><th>Score</th></tr>
-                <tr><td>M.Tech Aerospace</td><td>IIT Madras</td><td>8.38/10</td></tr>
-                <tr><td>B.Tech Aeronautical</td><td>KLS GIT [VTU]</td><td>9.15/10</td></tr>
-                <tr><td>Higher Secondary</td><td>Basavaprabhu Kore Science</td><td>83%</td></tr>
-                <tr><td>Secondary School</td><td>SVS Kannada Medium</td><td>94.08%</td></tr>
-            </table>
+            <p><strong>M.Tech Aerospace:</strong> IIT Madras (CGPA: 8.38/10)</p>
+            <p><strong>B.Tech Aeronautical:</strong> KLS GIT (CGPA: 9.15/10)</p>
+            <p><strong>GATE 2022:</strong> AIR-356</p>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fas fa-code"></i> Technical Skills</h2>
+            <span class="tag">MATLAB/Simulink</span> <span class="tag">Python</span> 
+            <span class="tag">SolidWorks</span> <span class="tag">Ansys</span> 
+            <span class="tag">XFLR5</span> <span class="tag">GMAT</span>
+        </section>
+    </div>
+
+    <footer style="text-align:center; padding:30px; background:var(--primary); color:white; font-size:0.8rem;">
+        &copy; 2026 Harshad Prakash Donawade. All rights reserved.
+    </footer>
+
+</body>
+</html>
