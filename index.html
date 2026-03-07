@@ -3,131 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Harshad Prakash Donawade | Flight Controls Engineer | Airbus</title>
-    <meta name="description" content="Official portfolio of Harshad Prakash Donawade, Flight Controls Development Engineer at Airbus India. M.Tech Aerospace from IIT Madras.">
-    <meta name="keywords" content="Harshad Prakash Donawade, Harshad Donawade, Aerospace Engineer, Airbus India, Flight Controls, IIT Madras, Trajectory Optimisation">
+    <title>Aerospace Control Systems Lab | Harshad Prakash Donawade</title>
     <meta name="author" content="Harshad Prakash Donawade">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Harshad Prakash Donawade",
-      "jobTitle": "Flight Controls Development Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Airbus India"
-      },
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "IIT Madras" },
-        { "@type": "CollegeOrUniversity", "name": "KLS Gogte Institute of Technology" }
-      ],
-      "url": "https://harshaiitm.github.io/Aero.github.io/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Belagavi",
-        "addressRegion": "Karnataka",
-        "addressCountry": "India"
-      }
-    }
-    </script>
-
+    <meta name="description" content="Official website of the Aerospace Control Systems Lab. Focused on Flight Controls, Trajectory Optimisation, and UAV Autonomy. Lead by Harshad Donawade.">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #002244; --accent: #005596; --bg: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
-        nav { background: white; padding: 1rem 2rem; position: sticky; top: 0; display: flex; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
-        header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; text-align: center; padding: 80px 20px; }
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; }
-        details { border: 1px solid #eee; border-radius: 8px; margin-bottom: 10px; }
-        summary { padding: 15px; font-weight: 600; cursor: pointer; color: var(--accent); }
-        .details-body { padding: 15px; border-top: 1px solid #eee; }
-        .tag { background: #e2e8f0; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin: 3px; }
-        .project-img-placeholder { background: #eee; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-bottom: 15px; border: 1px dashed #ccc; }
+        :root { --lab-blue: #0a192f; --accent: #64ffda; --text-light: #ccd6f6; --text-dark: #8892b0; }
+        body { font-family: 'Inter', sans-serif; background: var(--lab-blue); color: var(--text-dark); margin: 0; line-height: 1.6; }
+        
+        /* Navbar */
+        nav { padding: 1.5rem 2rem; display: flex; justify-content: space-between; position: sticky; top: 0; background: rgba(10, 25, 47, 0.95); z-index: 1000; border-bottom: 1px solid #233554; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text-light); font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero */
+        header { padding: 100px 20px; text-align: center; }
+        h1 { font-size: 3.5rem; color: var(--text-light); margin: 0; }
+        .author-tag { color: var(--accent); font-family: 'Courier New', monospace; font-size: 1.1rem; margin-top: 10px; }
+
+        /* Sections */
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        section { margin-bottom: 80px; }
+        h2 { color: var(--text-light); border-bottom: 1px solid #233554; padding-bottom: 10px; margin-bottom: 30px; display: flex; align-items: center; }
+        h2 i { margin-right: 15px; color: var(--accent); }
+
+        /* Research Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: #112240; padding: 30px; border-radius: 4px; transition: 0.3s; border: 1px solid transparent; }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
+        .card h3 { color: var(--text-light); margin-top: 0; }
+
+        /* Publications List */
+        .pub-item { border-left: 2px solid var(--accent); padding-left: 20px; margin-bottom: 20px; }
+        .pub-author { color: var(--accent); font-weight: bold; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #233554; color: var(--text-light); }
     </style>
 </head>
 <body>
 
     <nav>
-        <div style="font-weight: 800; color: var(--primary);">HARSHAD.AERO</div>
+        <div style="color: var(--accent); font-weight: bold;">ACSLAB_</div>
         <div class="nav-links">
-            <a href="#exp" style="text-decoration:none; margin-left:15px; color:var(--primary);">Experience</a>
-            <a href="#edu" style="text-decoration:none; margin-left:15px; color:var(--primary);">Education</a>
+            <a href="#research">Research</a>
+            <a href="#author">Author</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header>
-        <h1>Harshad Prakash Donawade</h1>
-        <p style="font-size:1.2rem; opacity:0.9;">Flight Controls Development Engineer @ Airbus India</p>
-        <div style="margin-top:20px;">
-            <a href="mailto:harshaddonawade@gmail.com" style="color:white; margin:0 10px;"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/harshad-donawade" style="color:white; margin:0 10px;"><i class="fab fa-linkedin"></i></a>
-        </div>
+        <h1>Aerospace Control Systems Lab</h1>
+        <div class="author-tag">Lead Researcher: Harshad Prakash Donawade</div>
+        <p style="max-width: 600px; margin: 20px auto;">Advancing the frontiers of flight dynamics, optimal control, and autonomous aerial robotics.</p>
     </header>
 
     <div class="container">
-        <section id="exp">
-            <h2><i class="fas fa-briefcase"></i> Experience</h2>
-            <details open>
-                <summary>Airbus India | Flight Controls Engineer (2024-Present)</summary>
-                <div class="details-body">
-                    <ul>
-                        <li>Performance modeling for High-Lift Systems (ATA-27b).</li>
-                        <li>SFCC software upgrades for A350, A380, and SA family.</li>
-                    </ul>
+        
+        <section id="research">
+            <h2><i class="fas fa-microscope"></i> Research Areas</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Flight Control Laws</h3>
+                    <p>Development and validation of performance models for high-lift systems and SFCC software upgrades (A350/A380/SA).</p>
                 </div>
-            </details>
-            <details>
-                <summary>IIT Dharwad | Junior Research Fellow (2022)</summary>
-                <div class="details-body">
-                    <p>Research on propeller downwash in UASS using Laser Doppler Velocimetry (LDV).</p>
+                <div class="card">
+                    <h3>Trajectory Optimisation</h3>
+                    <p>Utilizing Pseudospectral methods (LG, LGL, LGR, CGL) for fuel-optimal launch vehicle ascent and supersonic climb.</p>
                 </div>
-            </details>
+                <div class="card">
+                    <h3>UAV Autonomy</h3>
+                    <p>Design and fabrication of hybrid VTOL systems and investigation of propeller downwash in aerial spray systems.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="projects">
-            <h2><i class="fas fa-rocket"></i> Projects</h2>
-            <details>
-                <summary>Launch Vehicle Trajectory Optimisation</summary>
-                <div class="details-body">
-                    <div class="project-img-placeholder">
-                         <i class="fas fa-chart-line"></i> [Insert Trajectory Plot Image]
-                    </div>
-                    <p>M.Tech project at IIT Madras using Pseudospectral methods (LG, LGL, LGR, CGL).</p>
+        <section id="author">
+            <h2><i class="fas fa-user-tie"></i> Lab Director / Author</h2>
+            <div style="background: #112240; padding: 40px; border-radius: 4px;">
+                <h3 style="color: var(--text-light);">Harshad Prakash Donawade, M.Tech (IITM)</h3>
+                <p>Harshad is a Flight Controls Development Engineer at Airbus India and the primary author behind the lab's research initiatives. With an AIR-356 in GATE Aerospace, his expertise spans flight mechanics, optimal control, and UAV system design.</p>
+                <div class="tag-container">
+                    <span style="color:var(--accent)">#MATLAB</span> <span style="color:var(--accent)">#Simulink</span> <span style="color:var(--accent)">#FlightControls</span>
                 </div>
-            </details>
-            <details>
-                <summary>Hybrid Autonomous UAV Design</summary>
-                <div class="details-body">
-                    <div class="project-img-placeholder">
-                         <i class="fas fa-plane"></i> [Insert UAV Design Image]
-                    </div>
-                    <p>B.Tech project at KLS GIT. 2.4kg VTOL UAV design and testing.</p>
-                </div>
-            </details>
+            </div>
         </section>
 
-        <section id="edu">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <p><strong>M.Tech Aerospace:</strong> IIT Madras (CGPA: 8.38/10)</p>
-            <p><strong>B.Tech Aeronautical:</strong> KLS GIT (CGPA: 9.15/10)</p>
+        <section id="publications">
+            <h2><i class="fas fa-book"></i> Selected Publications</h2>
+            <div class="pub-item">
+                <p><em>"Experimental investigation of propeller downwash influence on spray characteristics in Unmanned Aerial Spray Systems (UASS)."</em></p>
+                <p class="pub-author">H.P. Donawade, et al.</p>
+                <p>ILASS-Asia 22nd Annual Conference on Liquid Atomization and Spray Systems, Oct 2022.</p>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2><i class="fas fa-code"></i> Technical Skills</h2>
-            <span class="tag">MATLAB/Simulink</span> <span class="tag">Python</span> 
-            <span class="tag">SolidWorks</span> <span class="tag">Ansys</span> 
-            <span class="tag">XFLR5</span> <span class="tag">GMAT</span>
-        </section>
     </div>
 
-    <footer style="text-align:center; padding:30px; background:var(--primary); color:white; font-size:0.8rem;">
-        &copy; 2026 Harshad Prakash Donawade. All rights reserved.
+    <footer>
+        <p>© 2024 ACS Lab | Designed by Harshad Prakash Donawade</p>
+        <p style="font-size: 0.8rem; opacity: 0.5;">Flight Control System Development Engineer | Airbus India</p>
     </footer>
 
 </body>
 </html>
-
