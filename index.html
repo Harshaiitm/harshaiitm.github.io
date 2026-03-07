@@ -3,99 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshad Prakash Donawade | Flight Controls Portfolio</title>
+    <title>Harshad Prakash Donawade | Aerospace Portfolio</title>
     <style>
-        :root { --primary: #002244; --accent: #005596; --bg: #f4f7f9; }
+        :root { --airbus-blue: #002244; --accent: #005596; --bg: #f0f4f8; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, sans-serif; line-height: 1.6; color: #333; margin: 0; background: var(--bg); }
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        header { text-align: center; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        h1 { color: var(--primary); margin: 0; }
-        .contact { font-size: 0.9rem; color: #666; margin-top: 15px; line-height: 1.8; }
-        section { background: white; padding: 30px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        .item { margin-bottom: 20px; }
-        .meta { display: flex; justify-content: space-between; font-weight: bold; color: var(--accent); }
-        .loc-date { display: flex; justify-content: space-between; font-style: italic; font-size: 0.85rem; color: #777; margin-bottom: 8px; }
-        .tag { background: #eef2f7; color: var(--accent); padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; margin: 3px; display: inline-block; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        
+        header { text-align: center; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        h1 { color: var(--airbus-blue); margin: 0; }
+        
+        /* Drop-down Style */
+        details { background: white; margin-bottom: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        summary { padding: 20px; font-weight: bold; color: var(--airbus-blue); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        summary:after { content: '▶'; font-size: 0.8rem; transition: 0.3s; }
+        details[open] summary:after { transform: rotate(90deg); }
+        .content { padding: 20px; background: #fff; }
+
+        /* Image Styling */
+        .project-img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; background: #ddd; }
+        .tag { background: var(--accent); color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Harshad Prakash Donawade [cite: 1]</h1>
-        <div class="contact">
-            <strong>Flight Controls Development Engineer [cite: 2]</strong><br>
-            📧 harshaddonawade@gmail.com | 📱 +918123304145 [cite: 3]<br>
-            📍 A/P- Ingali, Belagavi, India - 591242 [cite: 3]
-        </div>
+        <h1>Harshad Prakash Donawade</h1>
+        <p><strong>Flight Controls Development Engineer @ Airbus</strong> [cite: 2, 11]</p>
+        <p>📧 harshaddonawade@gmail.com | 📍 Belagavi, India [cite: 3]</p>
     </header>
 
-    <section>
-        <h2>Work Experience [cite: 10]</h2>
-        <div class="item">
-            <div class="meta">Airbus India Pvt Ltd | Flight Controls Development Engineer [cite: 11]</div>
-            <div class="loc-date"><span>Bengaluru, Karnataka [cite: 12]</span><span>July 2024 - Present [cite: 12]</span></div>
+    <h2>🚀 Professional Journey (Click to Expand)</h2>
+
+    <details>
+        <summary>Airbus India Pvt Ltd | Flight Controls Engineer [cite: 11]</summary>
+        <div class="content">
+            <p><em>July 2024 - Present | Bengaluru [cite: 12]</em></p>
             <ul>
-                <li>Developing and validating performance models for next-generation aircraft high-lift systems (HLS/ATA-27b)[cite: 17].</li>
-                <li>Upgrading Slat Flap Control Computer (SFCC) software for legacy models (SA family, A350, A380) to comply with system standards[cite: 18].</li>
+                <li>Developing performance models for next-gen High-Lift Systems (HLS/ATA-27b)[cite: 17].</li>
+                <li>Upgrading Slat Flap Control Computer (SFCC) software for A350 and A380 families[cite: 18].</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="meta">IIT Dharwad | Junior Research Fellow [cite: 19]</div>
-            <div class="loc-date"><span>Dharwad, Karnataka [cite: 19]</span><span>Apr 2022 - July 2022 [cite: 19]</span></div>
+    </details>
+
+    <details>
+        <summary>IIT Dharwad | Junior Research Fellow [cite: 19]</summary>
+        <div class="content">
+            <p><em>Apr 2022 - July 2022 [cite: 19]</em></p>
+            <div class="project-img" style="display:flex; align-items:center; justify-content:center;">[UASS Spray Pattern Image Placeholder]</div>
             <ul>
-                <li>Research on propeller downwash influence on spray characteristics in Unmanned Aerial Spray Systems (UASS)[cite: 20].</li>
-                <li>Used Laser Doppler Velocimetry (LDV) for spray droplet velocity and patternation study[cite: 21].</li>
-                <li>Conference Paper published at ILASS-Asia 22nd Annual Conference[cite: 22].</li>
+                <li>Studied propeller downwash effects on spray characteristics in unmanned aerial spray systems (UASS)[cite: 20].</li>
+                <li>Utilized Laser Doppler Velocimetry (LDV) for droplet velocity analysis[cite: 21].</li>
             </ul>
         </div>
-        <div class="item">
-            <div class="meta">Sparsh Machinery | Drone Development Intern [cite: 23]</div>
-            <div class="loc-date"><span>Jamshedpur, Jharkhand [cite: 24]</span><span>Feb 2021 - Apr 2021 [cite: 24]</span></div>
+    </details>
+
+    <h2>🛠️ Projects & Research</h2>
+
+    <details>
+        <summary>Launch Vehicle Trajectory Optimisation (M.Tech) [cite: 31, 32]</summary>
+        <div class="content">
+            
+            <p><em>MATLAB & Python | IIT Madras [cite: 5, 34]</em></p>
             <ul>
-                <li>Designed rotary wing UAVs (Quadcopter, Hexacopter) for wind turbine inspection and industrial cleaning[cite: 25].</li>
-                <li>Prototypes demonstrated at GE (Greenko) and Gamesa wind turbine companies[cite: 26].</li>
+                <li>Optimized trajectory for fuel minimization using Pseudo-Spectral methods[cite: 32, 35].</li>
+                <li>Implemented LG, LGL, LGR, and CGL schemes for multi-stage rocket vertical ascent[cite: 38].</li>
             </ul>
         </div>
-    </section>
+    </details>
 
-    <section>
-        <h2>Education [cite: 4]</h2>
-        <table>
-            <tr><th>Level</th><th>Institution</th><th>Result</th></tr>
-            <tr><td>M.Tech Aerospace [cite: 5]</td><td>IIT Madras [cite: 5]</td><td>8.38/10 [cite: 5]</td></tr>
-            <tr><td>B.Tech Aeronautical [cite: 6]</td><td>KLS Gogte Institute of Tech [cite: 6]</td><td>9.15/10 [cite: 6]</td></tr>
-            <tr><td>Higher Secondary [cite: 7]</td><td>Basavaprabhu Kore Science PU College [cite: 7]</td><td>83% [cite: 7]</td></tr>
-            <tr><td>Secondary School [cite: 8]</td><td>SVS Kannada Medium High School [cite: 9]</td><td>94.08% [cite: 8]</td></tr>
-        </table>
-    </section>
+    <details>
+        <summary>Hybrid Autonomous UAV Design (B.Tech) [cite: 39, 41]</summary>
+        <div class="content">
+            
+            <p><em>SolidWorks & XFLR5 [cite: 40, 44]</em></p>
+            <ul>
+                <li>Designed and fabricated a 2.4 kg takeoff weight hybrid UAV[cite: 43].</li>
+                <li>Analyzed stability in VTOL, climb, cruise, and descent regimes[cite: 46].</li>
+            </ul>
+        </div>
+    </details>
 
-    <section>
-        <h2>Technical Projects [cite: 30]</h2>
-        <div class="item">
-            <strong>Launch Vehicle Trajectory Optimisation (M.Tech) [cite: 31, 32]</strong>
-            <p>Minimized fuel consumption using Pseudo-Spectral methods (LG, LGL, LGR, CGL) in MATLAB and Python[cite: 35, 36, 38].</p>
-        </div>
-        <div class="item">
-            <strong>Hybrid Autonomous UAV (B.Tech) [cite: 39, 41]</strong>
-            <p>Designed and fabricated a 2.4kg UAV using SolidWorks and XFLR5; conducted flight tests for performance analysis[cite: 43, 44, 46].</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills & Certifications [cite: 65, 67]</h2>
-        <div class="tag-container">
-            <span class="tag">MATLAB/Simulink</span><span class="tag">Python</span><span class="tag">SOLIDWORKS</span>
-            <span class="tag">CATIA V5</span><span class="tag">Ansys</span><span class="tag">XFLR5</span>
-            <span class="tag">GMAT</span><span class="tag">Tecplot</span><span class="tag">GATE AIR-356 [cite: 70]</span>
-        </div>
-        <p style="font-size: 0.85rem; margin-top: 10px;">
-            <strong>Positions:</strong> Design Head and UAV Pilot - Aerodesign team at GIT[cite: 75].<br>
-            <strong>Certifications:</strong> Machine Learning (IITDH), Aircraft Design (NPTEL Silver), Cambridge English Business[cite: 69, 71, 73].
-        </p>
+    <section style="background:white; padding:20px; border-radius:8px; margin-top:30px;">
+        <h2>🎓 Education</h2>
+        <p><strong>M.Tech Aerospace:</strong> IIT Madras (8.38/10) [cite: 5]</p>
+        <p><strong>B.Tech Aeronautical:</strong> KLS GIT (9.15/10) [cite: 6]</p>
+        <p><strong>GATE 2022:</strong> AIR-356 in Aerospace [cite: 70]</p>
     </section>
 </div>
 
