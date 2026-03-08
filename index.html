@@ -5,29 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACSL | Aerospace Control Systems Lab</title>
     <meta name="author" content="D Harshad Prakash">
+    <meta name="description" content="Official portal of the Aerospace Control Systems Lab. Focused on Pseudospectral methods, Flight Dynamics, and Autonomous Systems.">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --bg: #0a192f; --card: #112240; --accent: #64ffda; --light: #ccd6f6; --slate: #8892b0; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--slate); margin: 0; }
+        :root { 
+            --bg: #0a192f; 
+            --card: #112240; 
+            --accent: #64ffda; 
+            --light: #ccd6f6; 
+            --slate: #8892b0; 
+            --navy-shadow: rgba(2, 12, 27, 0.7);
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--slate); margin: 0; line-height: 1.6; overflow-x: hidden; }
         
-        /* Navigation & Tabs */
-        nav { background: rgba(10, 25, 47, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #233554; }
-        .tab-container { display: flex; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: auto; }
-        .tab-link { padding: 20px; cursor: pointer; color: var(--light); font-family: 'Courier New', monospace; font-size: 0.8rem; border: none; background: none; transition: 0.3s; border-bottom: 2px solid transparent; }
+        /* Navigation & Centered Tabs */
+        nav { 
+            background: rgba(10, 25, 47, 0.95); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid #233554; 
+            display: flex;
+            justify-content: center;
+        }
+        .tab-container { display: flex; flex-wrap: wrap; justify-content: center; max-width: 1200px; }
+        .tab-link { 
+            padding: 20px 15px; 
+            cursor: pointer; 
+            color: var(--light); 
+            font-family: 'Courier New', monospace; 
+            font-size: 0.75rem; 
+            border: none; 
+            background: none; 
+            transition: 0.3s; 
+            border-bottom: 2px solid transparent;
+            letter-spacing: 1px;
+        }
         .tab-link:hover, .tab-link.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
 
         /* Content Control */
-        .tab-content { display: none; padding: 60px 20px; animation: fadeIn 0.5s ease; }
+        .tab-content { display: none; min-height: 80vh; animation: fadeIn 0.5s ease; }
         .tab-content.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Component Styles */
-        .container { max-width: 1000px; margin: auto; }
-        h1, h2, h3 { color: var(--light); }
-        .card { background: var(--card); padding: 30px; border-radius: 4px; margin-bottom: 20px; border-left: 4px solid var(--accent); }
-        .btn { border: 1px solid var(--accent); color: var(--accent); padding: 10px 20px; text-decoration: none; display: inline-block; margin-top: 10px; border-radius: 2px; transition: 0.3s; }
+        /* Centering Logic */
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+
+        /* Card Styling */
+        .card { 
+            background: var(--card); 
+            padding: 40px; 
+            border-radius: 4px; 
+            margin: 30px auto; 
+            max-width: 800px; 
+            border-left: 4px solid var(--accent); 
+            text-align: left; /* Keep body text left-aligned for readability */
+            box-shadow: 0 10px 30px -15px var(--navy-shadow);
+        }
+
+        /* Typography */
+        h1 { font-size: 3rem; color: var(--light); margin-bottom: 10px; }
+        h2 { font-size: 2rem; color: var(--light); margin-bottom: 30px; display: inline-block; border-bottom: 1px solid var(--accent); padding-bottom: 10px;}
+        h3 { color: var(--light); margin-top: 0; }
+        .accent-text { color: var(--accent); font-family: 'Courier New', monospace; font-size: 1.1rem; }
+
+        /* Layered Author (Dropdown) Styling */
+        .author-dropdown { background: var(--card); border-radius: 4px; margin-top: 40px; text-align: left; }
+        summary { padding: 20px; cursor: pointer; color: var(--accent); font-family: 'Courier New', monospace; font-weight: bold; list-style: none; display: flex; justify-content: space-between; }
+        summary::-webkit-details-marker { display: none; }
+        summary:after { content: '+'; }
+        details[open] summary:after { content: '-'; }
+        .author-inner { padding: 25px; border-top: 1px solid #233554; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+        /* Utility */
+        .btn { border: 1px solid var(--accent); color: var(--accent); padding: 12px 24px; text-decoration: none; display: inline-block; margin-top: 15px; border-radius: 2px; transition: 0.3s; font-size: 0.9rem; }
         .btn:hover { background: rgba(100, 255, 218, 0.1); }
-        .code-block { background: #010c1d; padding: 15px; font-family: monospace; color: #a5b4fc; border-radius: 4px; overflow-x: auto; }
+        .code-block { background: #010c1d; padding: 20px; font-family: 'Fira Code', monospace; color: #a5b4fc; border-radius: 4px; overflow-x: auto; text-align: left; font-size: 0.9rem; }
+        .tag { color: var(--accent); font-size: 0.8rem; font-family: 'Courier New', monospace; margin-right: 10px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .author-inner { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -43,77 +110,103 @@
     </div>
 </nav>
 
-<div class="container">
-    <section id="home" class="tab-content active">
+<section id="home" class="tab-content active">
+    <div class="container">
         <h1>Aerospace Control Systems Lab</h1>
-        <p class="accent-text" style="color:var(--accent); font-family: monospace;">Lead Researcher: D Harshad Prakash</p>
+        <p class="accent-text">Lead Researcher: D Harshad Prakash</p>
+        
         <div class="card">
             <h3>Welcome to ACSL</h3>
             <p>Our lab focuses on the intersection of mathematical optimization and high-performance flight mechanics. We specialize in Pseudospectral methods for launch vehicles and autonomous UAV trajectory stability.</p>
         </div>
-        
-    </section>
 
-    <section id="overview" class="tab-content">
+        
+    </div>
+</section>
+
+<section id="overview" class="tab-content">
+    <div class="container">
         <h2>Research Overview</h2>
         <div class="card">
             <h3>Trajectory Optimization</h3>
-            <p>Utilizing GMAT and MATLAB to solve fuel-optimal ascent problems using Legendre-Gauss (LG) and Chebychev-Gauss-Lobatto (CGL) nodes.</p>
+            <p>Mathematical modeling and fuel-minimization for multi-stage launch vehicles using Pseudospectral collocation methods (LG, LGL, LGR, CGL).</p>
         </div>
         <div class="card">
-            <h3>Fluid-Structure Interaction</h3>
-            <p>Experimental studies on propeller downwash in UASS using Laser Doppler Velocimetry (LDV).</p>
+            <h3>UAV Dynamics</h3>
+            <p>Experimental investigation of propeller downwash influence on spray characteristics using Laser Doppler Velocimetry (LDV).</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="getstarted" class="tab-content">
-        <h2>Getting Started</h2>
-        <p>Follow these steps to integrate ACSL optimization tools into your workflow:</p>
+<section id="getstarted" class="tab-content">
+    <div class="container">
+        <h2>Get Started</h2>
         <div class="card">
+            <p>To implement ACSL control laws in your simulation environment:</p>
             <ol>
-                <li>Clone the ACSL Repository from GitHub.</li>
-                <li>Ensure MATLAB R2022b or later is installed with the Optimization Toolbox.</li>
-                <li>Set the system path to include the `/src/pseudospectral/` directory.</li>
+                <li>Clone the ACSL core library.</li>
+                <li>Initialize MATLAB Optimization Toolbox.</li>
+                <li>Run <code>/scripts/setup_pseudospectral.m</code></li>
             </ol>
+            <a href="#" class="btn">View Documentation</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="problems" class="tab-content">
+<section id="problems" class="tab-content">
+    <div class="container">
         <h2>Example Problems</h2>
         <div class="card">
-            <h3>Goddard's Rocket Ascent</h3>
-            <p>Classic vertical ascent problem to reach maximum altitude with constrained fuel.</p>
+            <h3>Goddard's Rocket Problem</h3>
+            <p>Solving for optimal thrust to maximize final altitude under atmospheric drag.</p>
             <div class="code-block">
-                % Sample Cost Function snippet<br>
-                J = -altitude(final_time);
+                % Cost Function: Maximize Final Altitude<br>
+                f = @(x,u) [x(2); (u - drag(x(1),x(2)))/m - g; -u/c];
             </div>
         </div>
         
-    </section>
+    </div>
+</section>
 
-    <section id="downloads" class="tab-content">
+<section id="downloads" class="tab-content">
+    <div class="container">
         <h2>Downloads</h2>
         <div class="card">
-            <h3>Pseudospectral Toolkit (v1.0)</h3>
-            <p>MATLAB scripts for LGL and LGR collocation schemes.</p>
-            <a href="#" class="btn"><i class="fas fa-download"></i> Download .zip</a>
+            <h3>ACSL Toolkit v1.0</h3>
+            <p>Includes LGL and LGR weight matrices and mapping functions.</p>
+            <a href="#" class="btn"><i class="fas fa-download"></i> Source Code (.zip)</a>
         </div>
         <div class="card">
-            <h3>Research Papers</h3>
-            <p>ILASS-Asia 2022 Conference Paper (Full Text PDF).</p>
+            <h3>Research Publications</h3>
+            <p>ILASS-Asia 2022 Conference Paper - Full Text.</p>
             <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Download PDF</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="collaborators" class="tab-content">
-        <h2>Collaborators</h2>
-        <div class="card">
-            <p><strong>D Harshad Prakash</strong> (Author/PI)</p>
-            <p>Affiliations: IIT Madras | IIT Dharwad</p>
-            <p>Interested in collaborating? Contact via <a href="mailto:harshaddonawade@gmail.com" style="color:var(--accent)">Email</a>.</p>
-        </div>
-    </section>
-</div>
+<section id="collaborators" class="tab-content">
+    <div class="container">
+        <h2>Lab Personnel</h2>
+        <details class="author-dropdown">
+            <summary>Author & PI: D Harshad Prakash</summary>
+            <div class="author-inner">
+                <div>
+                    <p>Aerospace researcher specializing in Flight Controls and Optimal Control. Alumnus of IIT Madras and contributor to ILASS-Asia research.</p>
+                    <a href="mailto:harshaddonawade@gmail.com" class="btn">Contact Email</a>
+                </div>
+                <div style="border-left: 1px solid #233554; padding-left: 20px;">
+                    <p><strong>M.Tech</strong> | IIT Madras</p>
+                    <p><strong>B.Tech</strong> | KLS GIT</p>
+                    <span class="tag">#MATLAB</span> <span class="tag">#ControlLaws</span>
+                </div>
+            </div>
+        </details>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; border-top: 1px solid #233554;">
+    &copy; 2026 Aerospace Control Systems Lab | D Harshad Prakash
+</footer>
 
 <script>
     function openTab(evt, tabName) {
